@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        app:layout_constraintTop_toBottomOf="@+id/Request_JSON"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/Request_String"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="235dp"
+        android:onClick="Request_String"
+        android:text="String"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Request_JSON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="235dp"
+        android:onClick="Request_JSON"
+        android:text="JSON"
+        app:layout_constraintStart_toEndOf="@+id/Request_String"
+        app:layout_constraintTop_toTopOf="@+id/vitamio_videoView"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Request_Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="235dp"
+        android:onClick="Request_Image"
+        android:text="Image"
+        app:layout_constraintStart_toEndOf="@+id/Request_JSON"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <io.vov.vitamio.widget.VideoView
+        android:id="@+id/vitamio_videoView"
+        android:layout_width="400dp"
+        android:layout_height="230dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="65dp"
+        android:gravity="center"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/iv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Request_JSON"
+        app:layout_constraintVertical_bias="0.39" />
+</android.support.constraint.ConstraintLayout>
